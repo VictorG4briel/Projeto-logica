@@ -62,7 +62,6 @@ class Characters():
     
     
 #instances
-personagem = Characters('Victor',20,10,30)
+
 
 #Exit
-print(personagem)
