@@ -3,15 +3,20 @@ from Personagem import Characters
 class archer(Characters):
     def __init__(self, name):
         # stats base
-        super().__init__(name, life=30, attack=15, defense=8)
+        super().__init__(name, life=20, attack=7, defense=10)
         # equipamento 
-        self.weapon_name = "Flecha Explosiva"
+        self.weapon_name = "Furacão De Runaan"
         self.weapon_bonus = 5  
         self.pocao_uses = 1  
+        self.ability_uses = 1
 
     def special_attack(self, alvo):
+        if getattr(self, 'ability_uses', 0) <= 0:
+            print(f'{self.name} não tem usos restantes da habilidade!')
+            return 0
+        self.ability_uses -= 1
         ataque_total = self.attack + self.weapon_bonus
-        dano = ataque_total + 5 - alvo.defense
+        dano = ataque_total * 3 - alvo.defense
         if dano < 0:
             dano = 0
         print(f'{self.name} usou Chuva de Flechas com {self.weapon_name}!')

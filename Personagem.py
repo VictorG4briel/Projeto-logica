@@ -9,6 +9,7 @@ class Characters():
         self.weapon_bonus = 0
         self.armor_bonus = 0
         self.pocao_uses = 0
+        self.ability_uses = 1
 
     #getters
     @property
