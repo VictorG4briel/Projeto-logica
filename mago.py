@@ -5,7 +5,9 @@ class Wizard(Characters):
         super().__init__(name,life=15,attack=20,defense=10)
         # equipamento 
         self.weapon_name = "Capuz Da Morte De Rabadon"
-        self.weapon_bonus = 5  
+        self.weapon_bonus = 5
+        self.armor_name = "Zhonyas"
+        self.armor_bonus = 5
         self.pocao_uses = 1  
         self.ability_uses = 1
         self.special_name = "Bola de Fogo"

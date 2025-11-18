@@ -2,11 +2,11 @@ from Personagem import Characters
 
 class Warrior(Characters):
     def __init__(self,name):
-        super().__init__(name,life=30,attack=20,defense=13)
+        super().__init__(name,life=30,attack=26,defense=13)
         # equipamento 
         self.weapon_name = "Hemodrenario"
         self.weapon_bonus = 5
-        self.armor_name = "Placas de Aço"
+        self.armor_name = "Desespero eterno"
         self.armor_bonus = 8  
         self.pocao_uses = 1  
         self.ability_uses = 1

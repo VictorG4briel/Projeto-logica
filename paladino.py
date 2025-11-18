@@ -23,7 +23,7 @@ class Paladin(Characters):
             dano = 0
         alvo.receber_dano(dano)
         cura = self.defense // 2
+        print(f'{self.name} usou Golpe Sagrado com {self.weapon_name} causando {dano}!')
         self.curar(cura)
-    
-        print(f'{self.name} usou Golpe Sagrado com {self.weapon_name} causando {dano} e curou {cura}!')
         return dano
+    
