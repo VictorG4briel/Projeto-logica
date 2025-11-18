@@ -14,12 +14,12 @@ def selecionar_personagem():
     ]
 
     print("\n=== ESCOLHA SUA CLASSE ===")
-    for esc, classe, obj in classes:
-        # instancia temporária só para exibir stats/equip
-        temp = cls("__Stats__")
+    for esc, label, cls in classes:
+        temp = cls("__stats__")
         weapon = getattr(temp, 'weapon_name', '—')
         armor = getattr(temp, 'armor_name', '—')
-        print(f"{esc} - {classe}  |  HP:{temp.life} ATK:{temp.attack} DEF:{temp.defense}  |  Arma:{weapon}  Armadura:{armor}")
+        ability = getattr(temp,'special_name', '—')
+        print(f"{esc} - {label}  |  HP:{temp.life} ATK:{temp.attack} DEF:{temp.defense}  |  Arma:{weapon}  Armadura:{armor}  Habilidade:{ability}")
 
     escolha = input("Digite sua escolha (1-4): ")
     nome = input("Digite o nome do seu personagem: ")
@@ -55,8 +55,6 @@ def luta(p1, p2):
                 print(f"{atacante.name} atacou {defensor.name} causando {dano} de dano!")
             elif acao == "2":
                 dano = atacante.special_attack(defensor)
-                special = getattr(atacante, 'special_name', 'ataque especial')
-                print(f"{atacante.name} usou {special} causando {dano} de dano!")
             elif acao == "3":
                 sucesso = atacante.usar_pocao()
                 if not sucesso:
