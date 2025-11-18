@@ -71,7 +71,7 @@ class Characters():
         if (nova_vida > self.__max_life):
             nova_vida = self.__max_life
         self.life = nova_vida
-        print(f'{self.name} recuperou {self.life - vida_anterior} HP (Vida: {self.life}/{self.max_life})')
+        print(f'{self.name} recuperou {self.life - vida_anterior} HP')
         return self.life
     
     #função de receber dano
@@ -79,5 +79,4 @@ class Characters():
         self.__life -= dano
         if self.__life < 0:
             self.__life = 0 
-    
-#instances
+

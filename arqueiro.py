@@ -6,7 +6,9 @@ class Archer(Characters):
         super().__init__(name, life=20, attack=7, defense=10)
         # equipamento 
         self.weapon_name = "Furacão De Runaan"
-        self.weapon_bonus = 5  
+        self.weapon_bonus = 5
+        self.armor_name = "Anjo guardiao"
+        self.armor_bonus = 8 
         self.pocao_uses = 1  
         self.ability_uses = 1
         self.special_name = "Chuva de Flechas"
