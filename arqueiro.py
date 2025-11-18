@@ -9,6 +9,7 @@ class archer(Characters):
         self.weapon_bonus = 5  
         self.pocao_uses = 1  
         self.ability_uses = 1
+        self.special_name = "Chuva de Flechas"
 
     def special_attack(self, alvo):
         if getattr(self, 'ability_uses', 0) <= 0:
@@ -19,7 +20,6 @@ class archer(Characters):
         dano = ataque_total * 3 - alvo.defense
         if dano < 0:
             dano = 0
-        print(f'{self.name} usou Chuva de Flechas com {self.weapon_name}!')
         alvo.receber_dano(dano)
         return dano
 

@@ -49,7 +49,7 @@ class Characters():
     @defense.setter
     def defense(self,defense):
         self.__defense=defense
-
+    #Functions
     #Função de ataque 
     def atacar(self, alvo):
         bonus_arma=getattr(self,'weapon_bonus',0)
@@ -80,18 +80,4 @@ class Characters():
         if self.__life < 0:
             self.__life = 0 
     
-   
-    #Functions
-    def __str__(self):
-        return(
-            f'Nome do Personagem: {self.__name}\n'
-            f'Vida: {self.__life}/{self.__max_life}\n'
-            f'Attack: {self.__attack}\n'
-            f'Defesa: {self.defense}\n'
-        )
-    
-    
 #instances
-if __name__ == "__main__":
-    personagem = Characters('Victor', 20, 10, 30)
-    print(personagem)

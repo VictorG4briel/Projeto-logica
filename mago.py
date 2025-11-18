@@ -8,6 +8,7 @@ class wizard(Characters):
         self.weapon_bonus = 5  
         self.pocao_uses = 1  
         self.ability_uses = 1
+        self.special_name = "Bola de Fogo"
 
     def special_attack(self, alvo):
         if getattr(self, 'ability_uses', 0) <= 0:
