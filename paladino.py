@@ -2,7 +2,7 @@ from Personagem import Characters
 
 class Paladin(Characters):
     def __init__(self,name):
-        super().__init__(name,life=20,attack=10,defense=30)
+        super().__init__(name,life=30,attack=14,defense=15)
         # equipamento
         self.weapon_name = "Espada Sagrada"
         self.weapon_bonus = 3
@@ -10,6 +10,7 @@ class Paladin(Characters):
         self.armor_bonus = 10
         self.pocao_uses = 2  
         self.ability_uses = 1
+        self.special_name = "Golpe Sagrado"
     
     def special_attack(self, alvo):
         if getattr(self, 'ability_uses', 0) <= 0:
@@ -24,5 +25,5 @@ class Paladin(Characters):
         cura = self.defense // 2
         self.curar(cura)
     
-        print(f'{self.name} usou Golpe Sagrado com {self.weapon_name}!')
+        print(f'{self.name} usou Golpe Sagrado com {self.weapon_name} causando {dano} e curou {cura}!')
         return dano

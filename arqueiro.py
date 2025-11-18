@@ -1,6 +1,6 @@
 from Personagem import Characters
 
-class archer(Characters):
+class Archer(Characters):
     def __init__(self, name):
         # stats base
         super().__init__(name, life=20, attack=7, defense=10)
@@ -9,6 +9,7 @@ class archer(Characters):
         self.weapon_bonus = 5  
         self.pocao_uses = 1  
         self.ability_uses = 1
+        self.special_name = "Chuva de Flechas"
 
     def special_attack(self, alvo):
         if getattr(self, 'ability_uses', 0) <= 0:
@@ -19,16 +20,8 @@ class archer(Characters):
         dano = ataque_total * 3 - alvo.defense
         if dano < 0:
             dano = 0
-        print(f'{self.name} usou Chuva de Flechas com {self.weapon_name}!')
+        print(f'{self.name} usou Chuva de Flechas com {self.weapon_name} causando {dano}!')
         alvo.receber_dano(dano)
         return dano
 
-    def usar_pocao(self, quantidade=30):
-        if getattr(self, 'pocao_uses', 0) <= 0:
-            print(f'{self.name} não tem poções restantes!')
-            return False
-        self.pocao_uses -= 1
-
-        self.curar(quantidade)
-        print(f'{self.name} usou uma poção. Poções restantes: {self.pocao_uses}')
-        return True
+    
