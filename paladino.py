@@ -2,11 +2,11 @@ from Personagem import Characters
 
 class Paladin(Characters):
     def __init__(self,name):
-        super().__init__(name,life=30,attack=14,defense=15)
+        super().__init__(name,life=50,attack=14,defense=15)
         # equipamento
-        self.weapon_name = "Espada Sagrada"
+        self.weapon_name = "Ruptor Divino"
         self.weapon_bonus = 3
-        self.armor_name = "Armadura Divina"
+        self.armor_name = "Hooker Lamurico"
         self.armor_bonus = 10
         self.pocao_uses = 2  
         self.ability_uses = 1

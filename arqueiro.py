@@ -7,7 +7,7 @@ class Archer(Characters):
         # equipamento 
         self.weapon_name = "Furacão De Runaan"
         self.weapon_bonus = 5
-        self.armor_name = "Anjo guardiao"
+        self.armor_name = "Arco-Escudo"
         self.armor_bonus = 8 
         self.pocao_uses = 1  
         self.ability_uses = 1
