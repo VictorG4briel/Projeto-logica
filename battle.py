@@ -36,7 +36,6 @@ def luta(p1, p2):
     print(f"\n=== {p1.name} vs {p2.name} ===")
     rodada = 1
 
-    # alterna turnos até alguém morrer
     while p1.life > 0 and p2.life > 0:
         print(f"\n--- Rodada {rodada} ---")
         for atacante, defensor in ((p1, p2), (p2, p1)):
@@ -68,7 +67,6 @@ def luta(p1, p2):
 
         rodada += 1
 
-    # fallback
     if p1.life > 0:
         print(f"\n🎉 {p1.name} VENCEU!")
     else:
