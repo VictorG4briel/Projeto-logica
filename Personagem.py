@@ -25,7 +25,6 @@ class Characters():
     
     @property
     def defense(self):
-        # retorna defesa base + bônus de armadura (se existir)
         return self.__defense + getattr(self, 'armor_bonus', 0)
     
     @property
