@@ -5,7 +5,6 @@ class Characters():
         self.__max_life = life
         self.__attack = attack
         self.__defense = defense
-        # bônus padrão
         self.weapon_bonus = 0
         self.armor_bonus = 0
         self.pocao_uses = 0
