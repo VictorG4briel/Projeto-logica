@@ -2,14 +2,14 @@ from Personagem import Characters
 
 class Wizard(Characters):
     def __init__(self,name):
-        super().__init__(name,life=15,attack=20,defense=10)
+        super().__init__(name,life=15,attack=22,defense=10)
         # equipamento 
         self.weapon_name = "Capuz Da Morte De Rabadon"
-        self.weapon_bonus = 5
+        self.weapon_bonus = 6
         self.armor_name = "Zhonyas"
         self.armor_bonus = 5
         self.pocao_uses = 1  
-        self.ability_uses = 1
+        self.ability_uses = 2
         self.special_name = "Bola de Fogo"
 
     def special_attack(self, alvo):

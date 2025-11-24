@@ -2,7 +2,7 @@ from Personagem import Characters
 
 class Warrior(Characters):
     def __init__(self,name):
-        super().__init__(name,life=30,attack=15,defense=13)
+        super().__init__(name,life=50,attack=13,defense=13)
         # equipamento 
         self.weapon_name = "Hemodrenario"
         self.weapon_bonus = 5

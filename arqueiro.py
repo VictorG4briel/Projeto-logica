@@ -3,14 +3,14 @@ from Personagem import Characters
 class Archer(Characters):
     def __init__(self, name):
         # stats base
-        super().__init__(name, life=20, attack=7, defense=10)
+        super().__init__(name, life=20, attack=10, defense=10)
         # equipamento 
         self.weapon_name = "Furacão De Runaan"
-        self.weapon_bonus = 5
+        self.weapon_bonus = 8
         self.armor_name = "Arco-Escudo"
-        self.armor_bonus = 8 
+        self.armor_bonus = 5 
         self.pocao_uses = 1  
-        self.ability_uses = 1
+        self.ability_uses = 2
         self.special_name = "Chuva de Flechas"
 
     def special_attack(self, alvo):
