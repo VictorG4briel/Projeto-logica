@@ -8,7 +8,7 @@ class Wizard(Characters):
         self.weapon_bonus = 6
         self.armor_name = "Zhonyas"
         self.armor_bonus = 5
-        self.pocao_uses = 1  
+        self.potion_uses = 1  
         self.ability_uses = 2
         self.special_name = "Bola de Fogo"
 

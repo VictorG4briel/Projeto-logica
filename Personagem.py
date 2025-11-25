@@ -7,7 +7,7 @@ class Characters():
         self.__defense = defense
         self.weapon_bonus = 0
         self.armor_bonus = 0
-        self.pocao_uses = 0
+        self.potion_uses = 0
         self.ability_uses = 1
 
     #getters
@@ -21,7 +21,7 @@ class Characters():
     
     @property
     def attack(self):
-        return self.__attack
+        return self.__attack + getattr(self, 'weapon_bonus', 0)
     
     @property
     def defense(self):
@@ -58,7 +58,7 @@ class Characters():
         alvo.receber_dano(dano)
         return dano
     #funçao de usar poção
-    def usar_pocao(self,quantidade=30): 
+    def usar_pocao(self,quantidade=15): 
         print(f'{self.name} usou uma poção!')
         return self.curar(quantidade)
     
