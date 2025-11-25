@@ -8,7 +8,7 @@ class Warrior(Characters):
         self.weapon_bonus = 5
         self.armor_name = "Desespero eterno"
         self.armor_bonus = 8  
-        self.pocao_uses = 1  
+        self.potion_uses = 1  
         self.ability_uses = 1
         self.special_name = "Golpe Duplo"
         

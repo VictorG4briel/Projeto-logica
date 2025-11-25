@@ -9,7 +9,7 @@ class Archer(Characters):
         self.weapon_bonus = 8
         self.armor_name = "Arco-Escudo"
         self.armor_bonus = 5 
-        self.pocao_uses = 1  
+        self.potion_uses = 1  
         self.ability_uses = 2
         self.special_name = "Chuva de Flechas"
 
